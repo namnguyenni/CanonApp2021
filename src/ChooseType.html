@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./Bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="./Bootstrap/js/bootstrap.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="./Bootstrap/jquery.fancybox.min.css" media="screen">
+    <style>
+        body {
+  font-family: "Asap", sans-serif;
+  background-image: url('image/Background.png');
+  color:#989898;
+  margin:10px;
+  font-size:16px;
+
+}
+
+#demo {
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+
+.green{
+  background-color:#6fb936;
+}
+        .thumb{
+            margin-bottom: 30px;
+        }
+        
+        .page-top{
+            margin-top:85px;
+        }
+   a{
+       text-align: center;
+       text-decoration: none;
+   }
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius:5px;
+    object-fit:cover;
+
+}
+        
+ 
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+    .modal-header {
+   
+     border-bottom: none;
+}
+    .modal-title {
+        color:#000;
+    }
+    .modal-footer{
+      display:none;  
+    }
+
+    </style>
+ <title>Chọn loại pháo</title>
+</head>
+<body>
+    <!-- Page Content -->
+    <div class="container page-top">
+        <div class="row" style="text-align: center;">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <h1 style="text-align: center;color: #6fb936;">CHỌN LOẠI PHÁO GIẢNG DẠY</h1>
+        </div>
+        </div>
+        <div class="row">
+            <div  class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="1" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="">                  
+                    <h2>PHÁO 85</h2>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="2" href="#"  class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid"  alt="">
+                    <h2>PHÁO 152</h2>
+                </a>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="3" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="">
+                    <h2>SÚNG CỐI 100</h2>
+                </a>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="4" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
+                    <h2>SÚNG SPG-9</h2>
+                </a>
+            </div>
+            
+             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="5" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="">
+                    <h2>SÚNG LỰU 105</h2>
+                </a>
+            </div>
+            
+             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="6" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="">
+                    <h2>PHÁO 130-M46</h2>
+                </a>
+            </div>
+            
+             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="7" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
+                    <h2>XE CHIẾN ĐẤU BM21</h2>
+                </a>
+            </div>
+             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="8" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
+                    <h2>ĐẠN NGÒI</h2>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a data-type="9" href="#" class="fancybox" rel="ligthbox">
+                    <img  src="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
+                    <h2>PHÁO 122</h2>
+                </a>
+            </div>
+       </div>
+
+     
+      
+
+    </div>
+    <script src="./IPC_Handle/IPC_ChooseType.js">
+
+    </script>
+</body>
+</html>

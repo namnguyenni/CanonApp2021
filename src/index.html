@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CanonApp 2021</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div id="menu">
+    <div data-path="1" id="Lythuyet" class="menu-item"><i class="fa fa-file-text active" aria-hidden="true"></i> Lý thuyết</div>
+    <div data-path="1" id="Video"  class="menu-item"><i class="fa fa-video-camera" aria-hidden="true"></i> Video</div>
+    <div data-path="1" id="Mohinh"  class="menu-item"><i class="fa fa-cube" aria-hidden="true"></i> Mô hình</div>
+    <div data-path="1" id="Baigiang"  class="menu-item"><i class="fa fa-book" aria-hidden="true"></i> Bài giảng</div>
+    <div id="ReturnChoose" style="position: absolute;right: 0px;vertical-align: middle;"  class="menu-item"><i class="fa fa-angle-double-right" style="color: chartreuse;" aria-hidden="true"></i> Về trang chọn</div>
+  </div>
+  <div id="mainArea">
+    <div id="sidebar" class="resizable-content" style="overflow-y: scroll;">
+      <h2 class="sidebar-header" id="filetype">
+        <ul>
+          <li style="text-align: center; padding-left: 0px;">
+            <p id="texttitle">Lý thuyết</p>
+          </li>
+        </ul>
+      </h2>
+      <ul id="treeFile" >
+
+      </ul>
+    </div>
+    <div id="content">
+
+      <iframe style="display: none;" id="iframe3D" class="full-height" src=""></iframe>
+      <video style="display: inherit;" id="iframeVideo" class="full-height" controls>
+        <source id="srcVideo" src="C:\Users\Nguyen Nam\Desktop\ElectronPhaoBinh\Test\Demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div id="statusBar">
+    <i class="fa fa-check" aria-hidden="true"></i>+
+    <i class="fa fa-smile-o" aria-hidden="true"></i>
+  </div>
+  <script src="IPC_Handle/Preload.js">
+  </script>
+
+  <!--Contect menu-->
+
+
+  <div id="menuContext">
+    <a href="#" id="btnThemBG">
+      <i class="fa fa-fort-awesome"></i> Thêm bài giảng <span></span>
+    </a>
+    <a href="#" id="btnAddFile">
+      <i class="fa fa-fort-awesome"></i> Thêm File <span></span>
+    </a>
+    <hr />
+    <a href="#" id="btnXoa">
+      <i class="fa fa-fort-awesome"></i> Xóa <span></span>
+    </a>
+    <a href="#" id="btnRename">
+      <i class="fa fa-flag"></i> Đổi tên <span></span>
+    </a>
+  </div>
+  <script>
+    var i = document.getElementById("menuContext").style;
+    var tree = document.getElementById('treeFile');
+    var sidebar = document.getElementById('sidebar');
+    var texttitle =  document.getElementById('texttitle');
+    var ElementClick;
+  if (document.addEventListener) {
+    tree.addEventListener('contextmenu', function(e) {
+      var posX = e.clientX;
+      var posY = e.clientY;
+      menu(posX, posY);
+      ElementClick = e.target;
+      e.preventDefault();
+    }, false);
+
+    sidebar.addEventListener('contextmenu', function(e) {
+      //hiển thị context menu
+      var posX = e.clientX;
+      var posY = e.clientY;
+      menu(posX, posY);
+      ElementClick = e.target;
+      e.preventDefault();
+    }, false);
+
+  document.addEventListener('click', function(e) {
+    i.opacity = "0";
+    setTimeout(function() {
+      i.visibility = "hidden";
+    }, 501);
+  }, false);
+  } else {
+    tree.attachEvent('oncontextmenu', function(e) {
+    var posX = e.clientX;
+    var posY = e.clientY;
+    menu(posX, posY);
+    e.preventDefault();
+  });
+
+  sidebar.attachEvent('oncontextmenu', function(e) {
+    var posX = e.clientX;
+    var posY = e.clientY;
+    menu(posX, posY);
+    e.preventDefault();
+  });
+
+  document.attachEvent('onclick', function(e) {
+    i.opacity = "0";
+    setTimeout(function() {
+      i.visibility = "hidden";
+    }, 501);
+  });
+}
+
+function menu(x, y) {
+if(y+200 > screen.height)
+  {
+    y = y- 100;
+  }
+  
+  if(texttitle.innerHTML != "Bài giảng") document.getElementById('btnThemBG').style.display = 'none'
+  else document.getElementById('btnThemBG').style.display = 'inherit'
+  i.top = y + "px";
+  i.left = x + "px";
+  i.visibility = "visible";
+  i.opacity = "1";
+}
+  </script>
+
+</body>
+
+</html>
